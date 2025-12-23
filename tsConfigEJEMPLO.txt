@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",    // Compila el código a la sintaxis de módulos CommonJS para que funcione en Node.js.
+    "target": "ES6",         // Convierte el código a ES6 (también conocido como ES2015), que es moderno y compatible.
+    "outDir": "./dist",      // Guarda el código compilado en la carpeta 'dist'.
+    "rootDir": "./src",      // Encuentra los archivos TypeScript en la carpeta 'src'
+  },
+  "include": [
+    "src/**/*.ts"            // Incluye todos los archivos .ts dentro de la carpeta 'src'.
+  ],
+  "exclude": [
+    "node_modules"           // Excluye la carpeta 'node_modules' de la compilación.
+  ]
+}
+
+Esta configuración nos permite usar la sintaxis moderna de import / export en tu código TypeScript, haciéndolo más limpio y fácil de mantener.
+
+Y además nos asegura que el código TypeScript se compile a una forma que Node.js pueda entender (CommonJS), evitando errores de ejecución.
+
+archivo1.ts
+
+export function greet(name: string): string {
+  return `Hello, ${name}`;
+}
+
+archivo2.ts
+
+import { greet } from './archivo1';
+
+console.log(greet('World')); // Imprime: Hello, World
