@@ -1,3 +1,4 @@
+EDITADO DESDE GITHUB!!
 {
   "compilerOptions": {
     "module": "CommonJS",    // Compila el código a la sintaxis de módulos CommonJS para que funcione en Node.js.
